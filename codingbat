@@ -1,0 +1,97 @@
+# 1
+name = input("Enter your name: ")
+
+print(f"Hello {name}!")
+
+print()
+
+# 2
+word1 = input("Enter a word: ")
+word2 = input("Enter a word: ")
+
+print()
+
+print(word1 + word2 + word2 + word1)
+
+print()
+
+# 3
+tag = input("Enter a tag string: ")
+word = input("Enter a word: ")
+
+print()
+
+print(f"<{tag}>{word}</{tag}>")
+
+print()
+
+# 4
+out = input("Enter an outstring: ")
+word = input("Enter a word: ")
+
+print()
+
+print(out[:2] + word + out[2:])
+
+print()
+
+# 5
+word = input("Enter a word: ")
+
+print()
+
+print(word[3:] * 3)
+
+# 6
+word = input("Enter a word: ")
+
+print()
+
+if len(word) < 2:
+  print(word)
+else:
+  print(word[:2])
+
+# 7
+word = input("Enter a word: ")
+
+print()
+
+half = word[:len(word)//2]
+print(half)
+
+# 8
+word = input("Enter a word: ")
+
+print()
+
+without_end = word[1:-1]
+print(without_end)
+
+# 9
+word1 = input("Enter a word: ")
+word2 = input("Enter a word: ")
+
+print()
+
+if len(word1) < len(word2):
+  print(word1 + word2 + word1)
+else:
+  print(word2 + word1 + word2)
+
+# 10
+word1 = input("Enter a word: ")
+word2 = input("Enter a word: ")
+
+
+print()
+
+print(word1[1:] + word2[1:])
+
+# 11
+word = input("Enter a word: ")
+
+if len(word) > 2:
+  print(word[::-1])
+else:
+  print(word)
