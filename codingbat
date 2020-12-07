@@ -95,3 +95,10 @@ if len(word) > 2:
   print(word[::-1])
 else:
   print(word)
+  
+  # 12
+word = input("Enter a word: ")
+if len(word) > 2:
+  print(word[-2:] + word[:-2])
+else:
+	print(word)
