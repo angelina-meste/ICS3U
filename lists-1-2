@@ -1,0 +1,329 @@
+# LIST 1
+
+# 1
+
+from typing import List
+
+
+def first_last_6(nums: List[int]) -> bool:
+    if nums[0] == 6 or nums[len(nums) - 1] == 6:
+        return True
+    return False
+
+
+result = first_last_6([1, 2, 6, 3])
+print(result)
+
+# 2
+
+from typing import List
+
+
+def same_first_last(nums: List[int]) -> bool:
+    if len(nums) == 0:
+        return False
+    else:
+       return nums[0] == nums[len(nums) - 1]
+
+
+result = same_first_last([6, 2, 3, 6])
+print(result)
+
+# 3
+
+from typing import List
+
+
+def make_pi() -> List[int]:
+    list = [3, 1, 4]
+    return list
+ 
+
+
+result = make_pi()
+print(result)
+
+# 4
+
+from typing import List
+
+
+def common_end(a: List[int], b: List[int]) -> bool:
+    if len(a) == 0 and len(b) == 0:
+        return False
+    elif a[0] == b[0] or a[len(a)-1] == b[len(b)-1]:
+        return True
+    else:
+        return False
+
+
+result = common_end([1, 2, 3], [7, 3])
+print(result)
+
+# 5
+
+from typing import List
+
+
+def sum_3(nums: List[int]) -> int:
+    return nums[0] + nums[1] + nums[2]
+
+
+result = sum_3([1, 4, 3])
+print(result)
+
+# 6
+
+from typing import List
+
+
+def rotate_left_3(nums: List[int]) -> List[int]:
+    rotate = [nums[1], nums[2], nums[0]]
+    return rotate
+
+
+result = rotate_left_3([4, 2, 3])
+print(result)
+
+# 7
+
+from typing import List
+
+
+def reverse_3(nums: List[int]) -> List[int]:
+    rotate = [nums[2], nums[1], nums[0]]
+    return rotate
+
+
+result = reverse_3([1, 2, 3])
+print(result)
+
+# 8
+
+from typing import List
+
+
+def max_end_3(nums: List[int]) -> List[int]:
+    if nums[0] < nums[2]:
+        max = nums[2]
+    else:
+        max = nums[0]
+    nums[0] = max
+    nums[1] = max
+    nums[2] = max
+    return nums
+
+
+result = max_end_3([8, 2, 14])
+print(result)
+
+# 9
+
+from typing import List
+
+
+def sum_2(nums: List[int]) -> int:
+    if len(nums) == 0 or len(nums) == 1:
+        return 0
+    elif len(nums) >= 2:
+        return nums[0] + nums[1]
+
+result = sum_2([1, 2])
+print(result)
+
+# 10
+
+from typing import List
+
+
+def middle_way(a: List[int], b: List[int]) -> List[int]:
+    return [a[1], b[1]]
+
+
+result = middle_way([1, 6, 3], [4, 5, 6])
+print(result)
+
+# LIST 2
+
+
+# 1
+
+from typing import List
+
+
+def count_evens(nums: List[int]) -> int:
+    even = 0
+    for i in range(len(nums)):
+        if nums[i]%2 == 0:
+            even += 1
+            i += 1
+        else:
+            i += 1
+    return even
+
+
+result = count_evens([2, 1, 2, 6, 4])
+print(result)
+
+# 2
+
+from typing import List
+
+
+def big_diff(nums: List[int]) -> int:
+    b = nums[0]
+    s = nums[0]
+
+    for i in nums:
+        if i > b:
+            b = i
+        elif i < s:
+            s = i
+
+    return b - s
+
+
+result = big_diff([10, 4, 5, 6])
+print(result)
+
+# 3
+
+from typing import List
+
+
+def centered_average(nums: List[int]) -> int:
+    nums.sort()
+    return (sum(nums) - nums[0] - nums[len(nums) - 1]) / (len(nums) - 2)
+
+result = centered_average([100, 0, 5, 3, 4])
+print(result)
+    
+# 4 FIX
+
+from typing import List
+
+
+def sum_13(nums: List[int]) -> int:
+    flag = True
+    sum = 0
+
+    for i in range(len(nums)):       
+        if nums[i] != 13:
+           sum += nums[i]
+        else:
+            flag = False
+            
+    return sum
+
+
+result = sum_13([1, 3, 13, 1])
+print(result)
+  
+
+
+
+
+# 5
+
+from typing import List
+
+
+def sum_67(nums):
+    flag = True
+    sum = 0
+
+    for i in range(len(nums)):
+        if nums[i] == 6:
+            flag = False
+        elif flag == False and nums[i] == 7:
+            flag = True
+        else:
+            sum += nums[i]
+    return sum
+
+result = sum_67([1, 6, 7, 1])
+print(result)
+
+# 6
+
+from typing import List
+
+
+def has_22(nums: List[int]) -> bool:
+    for i in range(len(nums)):
+        if nums[i] == 2 and nums[i+1] == 2:
+            return True
+
+result = has_22([1, 2, 1, 2, 1])
+print(result) 
+
+# 7
+
+from typing import List
+
+
+def lucky_13(nums: List[int]) -> bool:
+    for i in range(len(nums)):
+        if nums[i] == 1 or nums[i] == 3:
+            return False
+        else:
+            return True
+
+
+result = lucky_13([5, 2, 4])
+print(result)
+
+# 8
+
+from typing import List
+
+
+def sum_28(nums: List[int]) -> bool:
+    sum = 0
+    for i in range(len(nums)):
+        if nums[i] == 2:
+            sum += 2
+        
+        if sum == 8:
+           return True
+    
+
+result = sum_28([2, 2, 2, 1, 4, 2])
+print(result)
+
+# 9
+
+from typing import List
+
+
+def more_14(nums: List[int]) -> bool:
+    ones = 0
+    fours = 0
+
+    for i in range(len(nums)):
+        if nums[i] == 1:
+            ones += 1
+        elif nums[i] == 4:
+            fours += 1
+    if ones > fours:
+        return True
+
+result = more_14([4, 4, 1])
+print(result)
+
+
+# 10
+
+from typing import List
+
+
+def fizz_array(n: int) -> List[int]:
+    new = []
+    i = 0
+    while i < n:
+        new.append(i)
+        i += 1
+    return new
+
+result = fizz_array(4)
+print(result)
