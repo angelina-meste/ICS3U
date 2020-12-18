@@ -1,0 +1,72 @@
+# 1
+
+def number_five():
+    # returns the number
+    return print("5")
+
+number_five()
+
+print()
+
+def useful():
+    # returns anything it's given :o
+    anything = input("Enter anything: ")
+    return print(anything)
+useful()
+
+print()
+
+def add_two():
+    # takes a number and adds two!!!
+    num = int(input("Enter a number: "))
+    num += 2
+    return print(num)
+
+add_two()
+
+print()
+
+# 2
+'''
+def say_hello(name: str) -> str:
+
+def sum_list(List[int]) -> List[int]:
+
+def find_item_in_list(string: str, List[int]) -> str, List[int]:
+'''
+# 3    
+    
+def times_two(num: int) -> int:
+    return num * 2
+
+results = times_two(5)
+print(results)
+
+print()
+
+# 4
+
+def greeting(name: str) -> str:
+    return f"Hello, {name}"
+
+results = greeting("lina")
+print(results)
+
+print()
+
+# 5
+
+from typing import List
+
+def all(nums: List[int]) -> List[int]:
+    positive = []
+    i = 0
+    while i < len(nums):
+        if nums[i] >= 0:
+            positive.append(nums[i])
+        i += 1
+
+    return positive
+
+results = all([1, 2, -1, 6])
+print(results)
